@@ -1,0 +1,3 @@
+# Studi Kasus 5: Customer Churn {#churn}
+
+Membuat model Bisnis pada kasus customer churn perusahaan telco

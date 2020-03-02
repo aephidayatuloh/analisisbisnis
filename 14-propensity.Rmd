@@ -1,0 +1,3 @@
+# Studi Kasus 4: Propensity {#propensity}
+
+Membuat model Bisnis pada kasus penawaran promo.

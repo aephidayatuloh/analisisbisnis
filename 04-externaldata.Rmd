@@ -1,0 +1,9 @@
+# Data Eksternal {#externaldata}
+
+Membahas cara membaca data eksternal (text, cvs, Excel, database) menggunakan berbagai fungsi dan package.
+
+Some _significant_ applications are demonstrated in this chapter.
+
+## Example one
+
+## Example two

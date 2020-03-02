@@ -1,0 +1,4 @@
+# Eksplorasi Data {#exploration}
+
+Membahas cara eksplorasi data secara numerik maupun grafik dasar R dan visualisasinya menggunnakan ggplot2.
+

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Bagian 2 Pengantar R | Analisis Data dan Bisinis: Implementasi Menggunakan R</title>
+  <meta name="description" content="Menggunakan analisis data untuk kebutuhan penunjang keputusan dan pengembangan bisnis Anda" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Bagian 2 Pengantar R | Analisis Data dan Bisinis: Implementasi Menggunakan R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Menggunakan analisis data untuk kebutuhan penunjang keputusan dan pengembangan bisnis Anda" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Bagian 2 Pengantar R | Analisis Data dan Bisinis: Implementasi Menggunakan R" />
+  
+  <meta name="twitter:description" content="Menggunakan analisis data untuk kebutuhan penunjang keputusan dan pengembangan bisnis Anda" />
+  
+
+<meta name="author" content="Aep Hidayatuloh, Penulis 2" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="business.html"/>
+<link rel="next" href="functionandpackage.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Analisis Data dan Bisinis: Implementasi Menggunakan R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Kata Pengantar</a></li>
+<li class="chapter" data-level="1" data-path="business.html"><a href="business.html"><i class="fa fa-check"></i><b>1</b> Bisinis dan Data-Driven</a><ul>
+<li class="chapter" data-level="1.1" data-path="business.html"><a href="business.html#analisis-data-dan-bisnis"><i class="fa fa-check"></i><b>1.1</b> Analisis Data dan Bisnis</a></li>
+<li class="chapter" data-level="1.2" data-path="business.html"><a href="business.html#penerapan-analisis-data"><i class="fa fa-check"></i><b>1.2</b> Penerapan Analisis Data</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="business.html"><a href="business.html#customer-relationship-management-crm"><i class="fa fa-check"></i><b>1.2.1</b> Customer Relationship Management (CRM)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="business.html"><a href="business.html#finansial-dan-produk"><i class="fa fa-check"></i><b>1.2.2</b> Finansial dan Produk</a></li>
+<li class="chapter" data-level="1.2.3" data-path="business.html"><a href="business.html#manajemen-rantai-pasokan"><i class="fa fa-check"></i><b>1.2.3</b> Manajemen Rantai Pasokan</a></li>
+<li class="chapter" data-level="1.2.4" data-path="business.html"><a href="business.html#manajemen-sumber-daya-manusia"><i class="fa fa-check"></i><b>1.2.4</b> Manajemen Sumber Daya Manusia</a></li>
+<li class="chapter" data-level="1.2.5" data-path="business.html"><a href="business.html#penentuan-harga"><i class="fa fa-check"></i><b>1.2.5</b> Penentuan Harga</a></li>
+<li class="chapter" data-level="1.2.6" data-path="business.html"><a href="business.html#rekomendasi-belanja"><i class="fa fa-check"></i><b>1.2.6</b> Rekomendasi Belanja</a></li>
+<li class="chapter" data-level="1.2.7" data-path="business.html"><a href="business.html#startegi-tim-olahraga"><i class="fa fa-check"></i><b>1.2.7</b> Startegi Tim Olahraga</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="business.html"><a href="business.html#investasi"><i class="fa fa-check"></i><b>1.3</b> Investasi</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Pengantar R</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#kenapa-memilih-r"><i class="fa fa-check"></i><b>2.1</b> Kenapa Memilih R?</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="intro.html"><a href="intro.html#download-dan-install-r"><i class="fa fa-check"></i><b>2.1.1</b> Download dan Install R</a></li>
+<li class="chapter" data-level="2.1.2" data-path="intro.html"><a href="intro.html#menjalankan-r"><i class="fa fa-check"></i><b>2.1.2</b> Menjalankan R</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#rstudio"><i class="fa fa-check"></i><b>2.2</b> RStudio</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#dasar-pemrograman-r"><i class="fa fa-check"></i><b>2.3</b> Dasar Pemrograman R</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="intro.html"><a href="intro.html#assignment"><i class="fa fa-check"></i><b>2.3.1</b> <em>Assignment</em></a></li>
+<li class="chapter" data-level="2.3.2" data-path="intro.html"><a href="intro.html#vector"><i class="fa fa-check"></i><b>2.3.2</b> Vector</a></li>
+<li class="chapter" data-level="2.3.3" data-path="intro.html"><a href="intro.html#factor"><i class="fa fa-check"></i><b>2.3.3</b> Factor</a></li>
+<li class="chapter" data-level="2.3.4" data-path="intro.html"><a href="intro.html#matriks"><i class="fa fa-check"></i><b>2.3.4</b> Matriks</a></li>
+<li class="chapter" data-level="2.3.5" data-path="intro.html"><a href="intro.html#array"><i class="fa fa-check"></i><b>2.3.5</b> Array</a></li>
+<li class="chapter" data-level="2.3.6" data-path="intro.html"><a href="intro.html#dataframe"><i class="fa fa-check"></i><b>2.3.6</b> Data.frame</a></li>
+<li class="chapter" data-level="2.3.7" data-path="intro.html"><a href="intro.html#list"><i class="fa fa-check"></i><b>2.3.7</b> List</a></li>
+<li class="chapter" data-level="2.3.8" data-path="intro.html"><a href="intro.html#function"><i class="fa fa-check"></i><b>2.3.8</b> Function</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#latihan"><i class="fa fa-check"></i><b>2.4</b> Latihan</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="functionandpackage.html"><a href="functionandpackage.html"><i class="fa fa-check"></i><b>3</b> Function dan Packages</a></li>
+<li class="chapter" data-level="4" data-path="externaldata.html"><a href="externaldata.html"><i class="fa fa-check"></i><b>4</b> Data Eksternal</a><ul>
+<li class="chapter" data-level="4.1" data-path="externaldata.html"><a href="externaldata.html#example-one"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
+<li class="chapter" data-level="4.2" data-path="externaldata.html"><a href="externaldata.html#example-two"><i class="fa fa-check"></i><b>4.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="exploration.html"><a href="exploration.html"><i class="fa fa-check"></i><b>5</b> Eksplorasi Data</a></li>
+<li class="chapter" data-level="6" data-path="clustering.html"><a href="clustering.html"><i class="fa fa-check"></i><b>6</b> Analisis Cluster</a><ul>
+<li class="chapter" data-level="6.1" data-path="clustering.html"><a href="clustering.html#including-plots"><i class="fa fa-check"></i><b>6.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="arules.html"><a href="arules.html"><i class="fa fa-check"></i><b>7</b> Association Rules</a></li>
+<li class="chapter" data-level="8" data-path="linearreg.html"><a href="linearreg.html"><i class="fa fa-check"></i><b>8</b> Regresi Linier</a></li>
+<li class="chapter" data-level="9" data-path="logreg.html"><a href="logreg.html"><i class="fa fa-check"></i><b>9</b> Regresi Logistik Biner</a></li>
+<li class="chapter" data-level="10" data-path="dectree.html"><a href="dectree.html"><i class="fa fa-check"></i><b>10</b> Decision Tree</a></li>
+<li class="chapter" data-level="11" data-path="custseg.html"><a href="custseg.html"><i class="fa fa-check"></i><b>11</b> Studi Kasus 1: Segmentasi Pelanggan</a></li>
+<li class="chapter" data-level="12" data-path="mba.html"><a href="mba.html"><i class="fa fa-check"></i><b>12</b> Studi Kasus 2: Market Basket</a></li>
+<li class="chapter" data-level="13" data-path="houseprice.html"><a href="houseprice.html"><i class="fa fa-check"></i><b>13</b> Studi Kasus 3: Penentuan Harga Rumah</a></li>
+<li class="chapter" data-level="14" data-path="propensity.html"><a href="propensity.html"><i class="fa fa-check"></i><b>14</b> Studi Kasus 4: Propensity</a></li>
+<li class="chapter" data-level="15" data-path="churn.html"><a href="churn.html"><i class="fa fa-check"></i><b>15</b> Studi Kasus 5: Customer Churn</a></li>
+<li class="chapter" data-level="16" data-path="reporting.html"><a href="reporting.html"><i class="fa fa-check"></i><b>16</b> Reporting</a></li>
+<li class="chapter" data-level="17" data-path="scheduler.html"><a href="scheduler.html"><i class="fa fa-check"></i><b>17</b> Proses Terjadwal</a></li>
+<li class="chapter" data-level="18" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>18</b> Web Dashboard Interaktif</a></li>
+<li class="chapter" data-level="19" data-path="scraping.html"><a href="scraping.html"><i class="fa fa-check"></i><b>19</b> Web Scraping</a></li>
+<li class="chapter" data-level="20" data-path="interactiveviz.html"><a href="interactiveviz.html"><i class="fa fa-check"></i><b>20</b> Visualisasi Interaktif</a></li>
+<li class="chapter" data-level="" data-path="daftar-pustaka.html"><a href="daftar-pustaka.html"><i class="fa fa-check"></i>Daftar Pustaka</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Analisis Data dan Bisinis: Implementasi Menggunakan R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="intro" class="section level1">
+<h1><span class="header-section-number">Bagian 2</span> Pengantar R</h1>
+<div id="kenapa-memilih-r" class="section level2">
+<h2><span class="header-section-number">2.1</span> Kenapa Memilih R?</h2>
+<p>R adalah sebuah program komputasi statistika dan grafis <span class="citation">(R Core Team <a href="#ref-R-base" role="doc-biblioref">2019</a>)</span>. Saat ini R sudah dikenal luas sebagai salah satu <em>powerful software</em> untuk analisis data dan <em>Data Science</em>. Tentu saja selain R masih banyak <em>software</em> lain yang tidak kalah dengan R, misalnya Python. Berikut ini beberapa hal diantara kelebihan R.</p>
+<ul>
+<li>Gratis dan Open Source</li>
+<li>Tersedia banyak sekali package yang dapat digunakan</li>
+<li>Dibuat oleh statistisi untuk statistisi</li>
+<li>Mudah dalam melakukan transformasi dan <em>processing</em> data</li>
+<li>Mempunyai package <code>ggplot2</code> yang mampu menghasilkan grafik yang sangat bagus</li>
+<li>Membuat <em>Reproducible report</em> dengan RMarkdown</li>
+<li>Dapat membuat aplikasi interaktif berbasis web (shiny &amp; flexdashboard), dan masih banyak lagi.</li>
+</ul>
+<div id="download-dan-install-r" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Download dan Install R</h3>
+<p>Di PC dengan OS Windows dapat melakukan langkah-langkah berikut untuk install R.</p>
+<ol style="list-style-type: decimal">
+<li>Buka halaman <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a></li>
+<li>Pilih <em>Download R for Windows</em></li>
+<li>Klik <em>Install R for the first time</em></li>
+<li>Kemudian klik <em>Download R x.x.x for Windows</em></li>
+<li>Simpan file installer tersebut dan tunggu hingga proses download selesai</li>
+<li>Setelah download selesai, jalankan file R x.x.x.exe tersebut dan hanya perlu <em>Next</em> dan <em>Finish</em></li>
+</ol>
+<p>catatan: mungkin Anda hanya perlu memilih untuk install versi 64bit jika OS Windows Anda adalah 64bit.</p>
+</div>
+<div id="menjalankan-r" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Menjalankan R</h3>
+<p>Setelah selesai install, Anda perlu membuka R GUI.</p>
+<ol style="list-style-type: decimal">
+<li>Pada Windows 10, klik atau tekan tombol <em>Start</em></li>
+<li>Cari Folder <strong>R</strong> dan pilih R sesuai versi yang sudah terinstall</li>
+</ol>
+<p>Di bawah ini adalah tampilan ketika Anda membuka program R GUI.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<img src="RGUI.png" alt="R GUI" width="683" />
+<p class="caption">
+Figure 2.1: R GUI
+</p>
+</div>
+<p>Anda sudah dapat menggunakan R melalui R GUI ini. Namun Anda juga dapat menggunakan <em>Integrated Development Environment</em> (IDE) untuk lebih nyaman, mudah dan efisien ketika bekerja dengan R. IDE untuk R yang saat ini sangat sering digunakan adalah <a href="https://rstudio.com">RStudio</a>. Berikut ini adalah cara untuk install RStudio di PC Windows.</p>
+</div>
+</div>
+<div id="rstudio" class="section level2">
+<h2><span class="header-section-number">2.2</span> RStudio</h2>
+<p>Sebelum membahas lebih lanjut tentang R, sebaiknya Anda download dan install <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a> terlebih dahulu. RStudio adalah <em>Integrated Development Environment</em> (IDE) yang banyak digunakan hingga saat ini. Dapat dikatakan bahwa hampir semua pengguna R yang sudah mengetahui RStudio akan lebih memilih menggunakan R melalui RStudio dibandingkan dengan menggunakan R GUI.</p>
+<p>Download RStudio versi desktop sesuai dengan kebutuhan Anda. Sangat disarankan untuk menggunakan RStudio versi terbaru, termasuk dengan R. R dan RStudio adalah dua program yang berbeda. Anda tidak harus install R untuk dapat menggunakan program R. Tapi Anda diwajibkan untuk install R terlebih dahulu sebelum install dan menggunkan RStudio. RStudio membutuhkan program R yang sudah terinstall di PC atau server.</p>
+<p>Install RStudio dengan cara berikut.</p>
+<ul>
+<li>Download RStudio Desktop (<a href="https://www.rstudio.com/products/rstudio/download/" class="uri">https://www.rstudio.com/products/rstudio/download/</a>)</li>
+<li>Jalankan installer yang sudah didownload</li>
+<li>Klik Next
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="install1.png" alt="Install: Langkah 1"  />
+<p class="caption">
+Figure 2.2: Install: Langkah 1
+</p>
+</div></li>
+<li>Klik Next
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<img src="install2.png" alt="Install: Langkah 2"  />
+<p class="caption">
+Figure 2.3: Install: Langkah 2
+</p>
+</div></li>
+<li>Klik Next
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<img src="install2.png" alt="Install: Langkah 3"  />
+<p class="caption">
+Figure 2.4: Install: Langkah 3
+</p>
+</div></li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
+<img src="rstudio2.png" alt="Tampilan RStudio" width="683" />
+<p class="caption">
+Figure 2.5: Tampilan RStudio
+</p>
+</div>
+</div>
+<div id="dasar-pemrograman-r" class="section level2">
+<h2><span class="header-section-number">2.3</span> Dasar Pemrograman R</h2>
+<p>Hal yang paling sederhana yang dapat dilakukan R adalah sebagai kalkulator. Coba Anda ketikan perintah di bawah ini pada console R dan tekan tombol Enter setelah selesai.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">4</span></a></code></pre></div>
+<p>Akan muncul hasil <code>[1] 6</code>. Hasil <code>[1]</code> menunjukkan bahwa yang ditampilkan adalah dari elemen pertama. Hal ini akan dibahas di bagian <a href="intro.html#vector">2.3.2</a>.</p>
+<p>Tanda <code>&gt;</code> adalah prompt yang menunjukkan bahwa R sedang dalam posisi siap menerima perintah baru. Jika perintah belum lengkap maka akan berganti menjadi tanda <code>+</code>. Artinya ada perintah atau bagian script yang belum selesai.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="op">&gt;</span><span class="st"> </span><span class="dv">2</span> <span class="op">+</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="op">+</span></a></code></pre></div>
+<p>Perhatikan setelah Anda tekan tombol Enter maka kursor di R yang sebelumnya <code>&gt;</code> berganti <code>+</code> yang menandakan bahwa perintah belum lengkap. Maka jika Anda kembali menuliskan bilangan lain, misalkan <code>4</code> dan tekan tombol Enter maka prompt di R akan kembali menjadi <code>&gt;</code> setelah menuliskan hasilnya karena perintah sudah lengkap dan selesai.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">print</span>(<span class="st">&quot;Hello World!&quot;</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;Hello World!&quot;</code></pre>
+<p>R adalah bahasa pemrograman yang <em>case-sensitive</em>. Artinya perbedaan huruf kapital dan huruf kecil sangat berpengaruh.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">a &lt;-<span class="st"> </span><span class="dv">3</span></a>
+<a class="sourceLine" id="cb5-2" title="2">a</a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="co">## [1] 3</span></a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1">A</a>
+<a class="sourceLine" id="cb6-2" title="2"><span class="co">## Error: object &#39;A&#39; not found</span></a></code></pre></div>
+<div id="assignment" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> <em>Assignment</em></h3>
+<p>Operator <em>assignment</em> di R umumnya menggunakan <code>&lt;-</code>.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">x &lt;-<span class="st"> </span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb7-2" title="2">x</a></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<table>
+<colgroup>
+<col width="25%" />
+<col width="74%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Operator <em>Assignment</em></th>
+<th>Penjelasan</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>&lt;-</code></td>
+<td>nilai dari sebelah kanan dimasukkan ke dalam objek di sebelah kiri (dapat juga menggunakan <code>=</code>).</td>
+</tr>
+<tr class="even">
+<td><code>-&gt;</code></td>
+<td>nilai dari sebelah kiri dimasukkan ke dalam objek di sebelah kanan.</td>
+</tr>
+<tr class="odd">
+<td><code>&lt;&lt;-</code></td>
+<td>nilai dari sebelah kanan dimasukkan ke dalam objek global di sebelah kiri.</td>
+</tr>
+<tr class="even">
+<td><code>-&gt;&gt;</code></td>
+<td>nilai dari sebelah kiri dimasukkan ke dalam objek global di sebelah kanan.</td>
+</tr>
+</tbody>
+</table>
+<p>Karena R adalah bahasa pemrograman yang <em>Case Sensitive</em>, jadi untuk penulisan nama objek atau nilai berupa karakter sangat tergantung dari kapitalisasinya.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1">x &lt;-<span class="st"> </span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb9-2" title="2">x</a></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1">X &lt;-<span class="st"> </span><span class="dv">4</span></a>
+<a class="sourceLine" id="cb11-2" title="2">X</a></code></pre></div>
+<pre><code>## [1] 4</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1">x &lt;-<span class="st"> </span><span class="dv">8</span></a>
+<a class="sourceLine" id="cb13-2" title="2">x</a></code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<p>Ketika menggunakan R, setiap yang ada di R disebut objek. Jenis-jenis objek dasar yang ada di R adalah vector, factor, matriks, array, data.frame, list dan function.</p>
+</div>
+<div id="vector" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Vector</h3>
+<p>Vector adalah objek paling sederhana yang ada di dalam R. Secara umum jenis data terbagi 2, yaitu numeric dan character. Ada berbagai cara untuk membuat sebuah vector di R.</p>
+<ol style="list-style-type: decimal">
+<li>Fungsi <code>c()</code></li>
+</ol>
+<p>Fungsi yang paling sering digunakan untuk membuat sebuah vector adalah dengan menggunakan fungsi <code>c()</code>.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1">x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb15-2" title="2">x</a></code></pre></div>
+<pre><code>## [1] 2 1 5 3 1</code></pre>
+<p>Pada script di atas, dibuat sebuah objek <code>x</code> berupa vector numeric. setiap elemen dipisah menggunakan tanda koma (<code>,</code>).</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Tanda colon (<code>:</code>)</li>
+</ol>
+<p>Untuk membuat sebuah vector numeric berurutan secara meningkat atau menurun. Lihat contoh berikut ini.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1"><span class="co"># membuat vector numeric dengan nilai dari 1 s/d 10 secara meningkat 1</span></a>
+<a class="sourceLine" id="cb17-2" title="2">x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span> <span class="co"># 1 sampai 10</span></a>
+<a class="sourceLine" id="cb17-3" title="3">x</a></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" title="1"><span class="co"># membuat vector numeric dengan nilai dari 10 s/d 10 secara menurun 1</span></a>
+<a class="sourceLine" id="cb19-2" title="2">x &lt;-<span class="st"> </span><span class="dv">10</span><span class="op">:-</span><span class="dv">10</span> <span class="co"># 10 sampai -10</span></a>
+<a class="sourceLine" id="cb19-3" title="3">x</a></code></pre></div>
+<pre><code>##  [1]  10   9   8   7   6   5   4   3   2   1   0  -1  -2  -3  -4  -5  -6  -7  -8
+## [20]  -9 -10</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Fungsi <code>seq()</code></li>
+</ol>
+<p>Membuat vector berurutan dan dengan <em>increment</em> tertentu.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" title="1">x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dt">from =</span> <span class="dv">1</span>, <span class="dt">to =</span> <span class="dv">10</span>) <span class="co"># 1 sampai 10 dengan increment 1 (default by = 1)</span></a>
+<a class="sourceLine" id="cb21-2" title="2">x</a></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" title="1">x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dt">from =</span> <span class="dv">1</span>, <span class="dt">to =</span> <span class="dv">20</span>, <span class="dt">by =</span> <span class="dv">2</span>) <span class="co"># 1 sampai 20 dengan increment 2</span></a>
+<a class="sourceLine" id="cb23-2" title="2">x</a></code></pre></div>
+<pre><code>##  [1]  1  3  5  7  9 11 13 15 17 19</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" title="1">x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dt">from =</span> <span class="dv">1</span>, <span class="dt">to =</span> <span class="dv">10</span>, <span class="dt">length.out =</span> <span class="dv">7</span>) <span class="co"># 1 sampai 10, sebanyak 7 elemen, increment mengikuti</span></a>
+<a class="sourceLine" id="cb25-2" title="2">x</a></code></pre></div>
+<pre><code>## [1]  1.0  2.5  4.0  5.5  7.0  8.5 10.0</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" title="1">x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dt">from =</span> <span class="dv">1</span>, <span class="dt">to =</span> <span class="dv">10</span>, <span class="dt">along.with =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">4</span>) <span class="co"># 1 sampai 10, sebanyak elemen dari vector lain</span></a>
+<a class="sourceLine" id="cb27-2" title="2">x</a></code></pre></div>
+<pre><code>## [1]  1  4  7 10</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Mengambil satu kolom dari data.frame</li>
+</ol>
+<p>Mengambil sebuah kolom dari sebuah data.frame akan dibahas lebih jauh di bagian data.frame (bagian <a href="intro.html#dataframe">2.3.6</a>). Dengan menggunakan tanda dolar <code>$</code> dan diikuti dengan nama kolom yang akan diambil dari data.frame tersebut.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" title="1">mtcars<span class="op">$</span>mpg</a></code></pre></div>
+<pre><code>##  [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2 10.4
+## [16] 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4 15.8 19.7
+## [31] 15.0 21.4</code></pre>
+<blockquote>
+<p>Dari data.frame <code>mtcars</code> diambil kolom <code>mpg</code></p>
+</blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>Fungsi <code>unlist()</code></li>
+</ol>
+<p>Fungsi ini berguna untuk menjadikan sebuah objek list menjadi sebuah vector. Pembahasan lebih lanjut akan dibahas di bagian <a href="intro.html#list">2.3.7</a>.</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" title="1">x &lt;-<span class="st"> </span><span class="kw">list</span>(mtcars<span class="op">$</span>mpg, mtcars<span class="op">$</span>disp)</a>
+<a class="sourceLine" id="cb31-2" title="2">x</a></code></pre></div>
+<pre><code>## [[1]]
+##  [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2 10.4
+## [16] 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4 15.8 19.7
+## [31] 15.0 21.4
+## 
+## [[2]]
+##  [1] 160.0 160.0 108.0 258.0 360.0 225.0 360.0 146.7 140.8 167.6 167.6 275.8
+## [13] 275.8 275.8 472.0 460.0 440.0  78.7  75.7  71.1 120.1 318.0 304.0 350.0
+## [25] 400.0  79.0 120.3  95.1 351.0 145.0 301.0 121.0</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" title="1">x &lt;-<span class="st"> </span><span class="kw">unlist</span>(x)</a>
+<a class="sourceLine" id="cb33-2" title="2">x</a></code></pre></div>
+<pre><code>##  [1]  21.0  21.0  22.8  21.4  18.7  18.1  14.3  24.4  22.8  19.2  17.8  16.4
+## [13]  17.3  15.2  10.4  10.4  14.7  32.4  30.4  33.9  21.5  15.5  15.2  13.3
+## [25]  19.2  27.3  26.0  30.4  15.8  19.7  15.0  21.4 160.0 160.0 108.0 258.0
+## [37] 360.0 225.0 360.0 146.7 140.8 167.6 167.6 275.8 275.8 275.8 472.0 460.0
+## [49] 440.0  78.7  75.7  71.1 120.1 318.0 304.0 350.0 400.0  79.0 120.3  95.1
+## [61] 351.0 145.0 301.0 121.0</code></pre>
+<p>Fungsi <code>unlist()</code> menggabungkan semua <code>list</code> menjadi sebuah vector.</p>
+<p><strong>Catatan penting untuk vector</strong>: walaupun ditampilkan ke samping, dimensi vector di R sebenarnya ke bawah. Bayangkan untuk sebuah vector seperti satu kolom di Ms Excel.</p>
+<p>Semua contoh di atas untuk membuat vector adalah vector numeric. Vector numeric adalah vector yang semua elemennya bernilai dan bertipe numerik.</p>
+<div id="vector-character" class="section level4">
+<h4><span class="header-section-number">2.3.2.1</span> Vector Character</h4>
+<p>Vector character adalah vector yang semua elemennya bertipe character.</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" title="1">y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;d&quot;</span>, <span class="st">&quot;c&quot;</span>)</a>
+<a class="sourceLine" id="cb35-2" title="2">y</a></code></pre></div>
+<pre><code>## [1] &quot;a&quot; &quot;A&quot; &quot;d&quot; &quot;c&quot;</code></pre>
+<p>Jika ketika membuat sebuah vector bernilai numerik namun ada satu saja elemennya bertipe character maka semua elemennya akan bertipe character.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" title="1"><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="st">&quot;a&quot;</span>)</a></code></pre></div>
+<pre><code>## [1] &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;5&quot; &quot;a&quot;</code></pre>
+<p>Di R ada 2 buah vector khusus yang bertipe character, yaitu <code>letters</code> dan <code>LETTERS</code>.</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" title="1">letters</a></code></pre></div>
+<pre><code>##  [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot; &quot;f&quot; &quot;g&quot; &quot;h&quot; &quot;i&quot; &quot;j&quot; &quot;k&quot; &quot;l&quot; &quot;m&quot; &quot;n&quot; &quot;o&quot; &quot;p&quot; &quot;q&quot; &quot;r&quot; &quot;s&quot;
+## [20] &quot;t&quot; &quot;u&quot; &quot;v&quot; &quot;w&quot; &quot;x&quot; &quot;y&quot; &quot;z&quot;</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" title="1">LETTERS</a></code></pre></div>
+<pre><code>##  [1] &quot;A&quot; &quot;B&quot; &quot;C&quot; &quot;D&quot; &quot;E&quot; &quot;F&quot; &quot;G&quot; &quot;H&quot; &quot;I&quot; &quot;J&quot; &quot;K&quot; &quot;L&quot; &quot;M&quot; &quot;N&quot; &quot;O&quot; &quot;P&quot; &quot;Q&quot; &quot;R&quot; &quot;S&quot;
+## [20] &quot;T&quot; &quot;U&quot; &quot;V&quot; &quot;W&quot; &quot;X&quot; &quot;Y&quot; &quot;Z&quot;</code></pre>
+<p>Dua buah vector atau lebih dapat digabungkan dengan fungsi <code>c()</code>. Namun, jika salah satu vector bertipe character, maka vector hasil gabungan akan menjadi vector character.</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" title="1"><span class="kw">c</span>(x, y)</a></code></pre></div>
+<pre><code>##  [1] &quot;21&quot;    &quot;21&quot;    &quot;22.8&quot;  &quot;21.4&quot;  &quot;18.7&quot;  &quot;18.1&quot;  &quot;14.3&quot;  &quot;24.4&quot;  &quot;22.8&quot; 
+## [10] &quot;19.2&quot;  &quot;17.8&quot;  &quot;16.4&quot;  &quot;17.3&quot;  &quot;15.2&quot;  &quot;10.4&quot;  &quot;10.4&quot;  &quot;14.7&quot;  &quot;32.4&quot; 
+## [19] &quot;30.4&quot;  &quot;33.9&quot;  &quot;21.5&quot;  &quot;15.5&quot;  &quot;15.2&quot;  &quot;13.3&quot;  &quot;19.2&quot;  &quot;27.3&quot;  &quot;26&quot;   
+## [28] &quot;30.4&quot;  &quot;15.8&quot;  &quot;19.7&quot;  &quot;15&quot;    &quot;21.4&quot;  &quot;160&quot;   &quot;160&quot;   &quot;108&quot;   &quot;258&quot;  
+## [37] &quot;360&quot;   &quot;225&quot;   &quot;360&quot;   &quot;146.7&quot; &quot;140.8&quot; &quot;167.6&quot; &quot;167.6&quot; &quot;275.8&quot; &quot;275.8&quot;
+## [46] &quot;275.8&quot; &quot;472&quot;   &quot;460&quot;   &quot;440&quot;   &quot;78.7&quot;  &quot;75.7&quot;  &quot;71.1&quot;  &quot;120.1&quot; &quot;318&quot;  
+## [55] &quot;304&quot;   &quot;350&quot;   &quot;400&quot;   &quot;79&quot;    &quot;120.3&quot; &quot;95.1&quot;  &quot;351&quot;   &quot;145&quot;   &quot;301&quot;  
+## [64] &quot;121&quot;   &quot;a&quot;     &quot;A&quot;     &quot;d&quot;     &quot;c&quot;</code></pre>
+</div>
+</div>
+<div id="factor" class="section level3">
+<h3><span class="header-section-number">2.3.3</span> Factor</h3>
+<p>Factor merupakan bentuk lebih luas dari vector. Biasanya factor lebih sering digunakan untuk menyimpan data nominal atau ordinal. Misalnya vector character yang berisi <code>"male"</code> dan <code>"female"</code>. Pada vector character, nilainya adalah <code>"male"</code> dan <code>"female"</code> seperti terlihat apa adanya. Namun pada factor, tampilan dari isi datanya mungkin <code>"male"</code> dan <code>"female"</code> tetapi isi dari factor adalah pengkodean numerik. Misal untuk <code>"female"</code> nilai sebenarnya adalah <code>1</code>, sedangkan <code>"male"</code> berniali <code>2</code>.</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb45-1" title="1">fc &lt;-<span class="st"> </span><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;SD&quot;</span>, <span class="st">&quot;SMA&quot;</span>, <span class="st">&quot;SMP&quot;</span>, <span class="st">&quot;SMP&quot;</span>, <span class="st">&quot;SD&quot;</span>, <span class="st">&quot;SMA&quot;</span>, <span class="st">&quot;SD&quot;</span>, <span class="st">&quot;SMP&quot;</span>))</a>
+<a class="sourceLine" id="cb45-2" title="2">fc</a></code></pre></div>
+<pre><code>## [1] SD  SMA SMP SMP SD  SMA SD  SMP
+## Levels: SD SMA SMP</code></pre>
+<p>Nilai sebenarnya dari factor tersebut adalah</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb47-1" title="1"><span class="kw">print.default</span>(fc)</a></code></pre></div>
+<pre><code>## [1] 1 2 3 3 1 2 1 3</code></pre>
+<p>Factor mempunyai level, secara default levelnya adalah berdasarkan urutan alfabet. Untuk merubah level dari sebuah factor, gunakan argumen <code>levels =</code>.</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb49-1" title="1"><span class="kw">factor</span>(fc, <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;SD&quot;</span>, <span class="st">&quot;SMP&quot;</span>, <span class="st">&quot;SMA&quot;</span>))</a></code></pre></div>
+<pre><code>## [1] SD  SMA SMP SMP SD  SMA SD  SMP
+## Levels: SD SMP SMA</code></pre>
+</div>
+<div id="matriks" class="section level3">
+<h3><span class="header-section-number">2.3.4</span> Matriks</h3>
+<p>Matriks adalah objek di R yang memiliki 2 dimensi, baris (<em>row</em>) dan kolom (<em>column</em>), dan tipe nilainya sama. Jika ketika membuat sebuah matriks elemennya memiliki minimal 1 elemen bertipe character maka seluruh matriks tersebut akan bertipe character. Membuat matriks di R menggunakan vector yang dikonversi dimensinya.</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb51-1" title="1">x &lt;-<span class="st"> </span>mtcars<span class="op">$</span>mpg <span class="co"># vector</span></a>
+<a class="sourceLine" id="cb51-2" title="2"><span class="kw">length</span>(x) </a></code></pre></div>
+<pre><code>## [1] 32</code></pre>
+<p>Karena vector <code>x</code> memmiliki 64 elemen, maka dimensi matriks yang dapat dibuat adalah 2 angka yang hasil perkaliannya menghasilkan nilai 32. Salah satunya adalah <code>8 x 4 = 32</code>.</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb53-1" title="1">m &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="dt">data =</span> x, <span class="dt">nrow =</span> <span class="dv">8</span>, <span class="dt">ncol =</span> <span class="dv">4</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb53-2" title="2">m</a></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,] 21.0 21.0 22.8 21.4
+## [2,] 18.7 18.1 14.3 24.4
+## [3,] 22.8 19.2 17.8 16.4
+## [4,] 17.3 15.2 10.4 10.4
+## [5,] 14.7 32.4 30.4 33.9
+## [6,] 21.5 15.5 15.2 13.3
+## [7,] 19.2 27.3 26.0 30.4
+## [8,] 15.8 19.7 15.0 21.4</code></pre>
+<p>Matriks <code>m</code> adalah matriks berukuran 8x4. Argumen <code>byrow = TRUE</code> artinya matriks akan setiap elemen <code>x</code> diisikan ke <code>m</code> memenuhi baris terlebih dahulu. Jika <code>byrow = FALSE</code> maka setiap elemen <code>x</code> diisikan ke <code>m</code> memenuhi kolom terlebih dahulu.</p>
+<p>Untuk membuat matriks dengan nilai yang sama seluruhnya, maka dapat dilakukan seperti berikut.</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb55-1" title="1"><span class="kw">matrix</span>(<span class="dt">data =</span> <span class="dv">0</span>, <span class="dt">nrow =</span> <span class="dv">5</span>, <span class="dt">ncol =</span> <span class="dv">6</span>)</a></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6]
+## [1,]    0    0    0    0    0    0
+## [2,]    0    0    0    0    0    0
+## [3,]    0    0    0    0    0    0
+## [4,]    0    0    0    0    0    0
+## [5,]    0    0    0    0    0    0</code></pre>
+<p>Untuk mengakses elemen dari suatu matriks, Anda dapat menggunakan indeks dari baris atau kolomnya.</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb57-1" title="1"><span class="co"># Mengambil elemen matriks `m` di baris 4</span></a>
+<a class="sourceLine" id="cb57-2" title="2">m[<span class="dv">4</span>, ]</a></code></pre></div>
+<pre><code>## [1] 17.3 15.2 10.4 10.4</code></pre>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb59-1" title="1"><span class="co"># Mengambil elemen matriks `m` di kolom 3</span></a>
+<a class="sourceLine" id="cb59-2" title="2">m[, <span class="dv">3</span>]</a></code></pre></div>
+<pre><code>## [1] 22.8 14.3 17.8 10.4 30.4 15.2 26.0 15.0</code></pre>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb61-1" title="1"><span class="co"># Mengambil elemen matriks `m` di baris 4 dan kolom 3</span></a>
+<a class="sourceLine" id="cb61-2" title="2">m[<span class="dv">4</span>, <span class="dv">3</span>]</a></code></pre></div>
+<pre><code>## [1] 10.4</code></pre>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb63-1" title="1"><span class="co"># Mengambil elemen matriks `m` di baris 4 dan 6, dan kolom 3</span></a>
+<a class="sourceLine" id="cb63-2" title="2">m[<span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">6</span>), <span class="dv">3</span>]</a></code></pre></div>
+<pre><code>## [1] 10.4 15.2</code></pre>
+<p>R menyediakan sebuah fungsi yaitu <code>diag()</code> untuk mengakses nilai-nilai pada diagonal utama sebuah matriks.</p>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb65-1" title="1"><span class="kw">diag</span>(m)</a></code></pre></div>
+<pre><code>## [1] 21.0 18.1 17.8 10.4</code></pre>
+<p>Anda juga dapat mengganti nilai dari elemen suatu matriks dengan menggunakan operator <em>assignment</em>.</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb67-1" title="1">m[<span class="dv">4</span>, <span class="dv">3</span>] &lt;-<span class="st"> </span><span class="dv">0</span></a>
+<a class="sourceLine" id="cb67-2" title="2">m[<span class="dv">4</span>, <span class="dv">3</span>]</a></code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb69-1" title="1">m <span class="co"># perhatikan elemen di baris 4 kolom 3 sudah berubah jadi 0.0</span></a></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,] 21.0 21.0 22.8 21.4
+## [2,] 18.7 18.1 14.3 24.4
+## [3,] 22.8 19.2 17.8 16.4
+## [4,] 17.3 15.2  0.0 10.4
+## [5,] 14.7 32.4 30.4 33.9
+## [6,] 21.5 15.5 15.2 13.3
+## [7,] 19.2 27.3 26.0 30.4
+## [8,] 15.8 19.7 15.0 21.4</code></pre>
+</div>
+<div id="array" class="section level3">
+<h3><span class="header-section-number">2.3.5</span> Array</h3>
+<p>Array merupakan matriks dengan dimensi lebih banyak. Jika matriks hanya mempunyai 2 dimensi, maka array dapat memiliki dimensi lebih dari 2.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-32"></span>
+<img src="array.png" alt="Ilustrasi Array 3 dimensi" width="432" />
+<p class="caption">
+Figure 2.6: Ilustrasi Array 3 dimensi
+</p>
+</div>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb71-1" title="1"><span class="kw">array</span>(mtcars<span class="op">$</span>mpg, <span class="dt">dim =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">2</span>))</a></code></pre></div>
+<pre><code>## , , 1
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,] 21.0 18.7 22.8 17.3
+## [2,] 21.0 18.1 19.2 15.2
+## [3,] 22.8 14.3 17.8 10.4
+## [4,] 21.4 24.4 16.4 10.4
+## 
+## , , 2
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,] 14.7 21.5 19.2 15.8
+## [2,] 32.4 15.5 27.3 19.7
+## [3,] 30.4 15.2 26.0 15.0
+## [4,] 33.9 13.3 30.4 21.4</code></pre>
+<p>Salah satu array yang ada setelah Anda install R adalah array <code>Titanic</code>.</p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb73-1" title="1">Titanic</a></code></pre></div>
+<pre><code>## , , Age = Child, Survived = No
+## 
+##       Sex
+## Class  Male Female
+##   1st     0      0
+##   2nd     0      0
+##   3rd    35     17
+##   Crew    0      0
+## 
+## , , Age = Adult, Survived = No
+## 
+##       Sex
+## Class  Male Female
+##   1st   118      4
+##   2nd   154     13
+##   3rd   387     89
+##   Crew  670      3
+## 
+## , , Age = Child, Survived = Yes
+## 
+##       Sex
+## Class  Male Female
+##   1st     5      1
+##   2nd    11     13
+##   3rd    13     14
+##   Crew    0      0
+## 
+## , , Age = Adult, Survived = Yes
+## 
+##       Sex
+## Class  Male Female
+##   1st    57    140
+##   2nd    14     80
+##   3rd    75     76
+##   Crew  192     20</code></pre>
+</div>
+<div id="dataframe" class="section level3">
+<h3><span class="header-section-number">2.3.6</span> Data.frame</h3>
+<p>Data.frame layaknya sebuah tabel di Ms Excel, terdiri dari baris dan kolom dengan nama masing-masing kolom berbeda. Apa bedanya dengan matriks? Matriks hanya bisa menyimpan tipe data yang sama, numeric atau character seluruhnya. Pada data.frame, masing-masing kolom boleh memiliki tipe data yang berbeda.</p>
+</div>
+<div id="list" class="section level3">
+<h3><span class="header-section-number">2.3.7</span> List</h3>
+</div>
+<div id="function" class="section level3">
+<h3><span class="header-section-number">2.3.8</span> Function</h3>
+</div>
+</div>
+<div id="latihan" class="section level2">
+<h2><span class="header-section-number">2.4</span> Latihan</h2>
+<ol style="list-style-type: decimal">
+<li>Buatlah sebuah vector dengan nama <code>x1</code> yang merupakan gabungan dari kolom <code>drat</code> dan <code>wt</code> dari data.frame <code>mtcars</code>.</li>
+<li></li>
+</ol>
+
+</div>
+</div>
+<h3>Daftar Pustaka</h3>
+<div id="refs" class="references">
+<div id="ref-R-base">
+<p>R Core Team. 2019. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="business.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="functionandpackage.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["buku.pdf", "buku.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

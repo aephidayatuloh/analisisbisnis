@@ -1,0 +1,3 @@
+# Proses Terjadwal {#scheduler}
+
+Membahas cara menggunnakan Task Scheduler pada sistem operasi windows untuk pemrosesan program yang terjadwal

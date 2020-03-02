@@ -1,0 +1,63 @@
+Kerangka buku R untuk Data Analisis Bisnis
+
+Chapter 1
+Bisnis dan Data-Driven
+# Membahas tentang Bisnis dan perkembangannya di masa sebelum dan setelah perkembangan analisis data
+Chapter 2
+Pengenalan R
+# Mengenalkan R sebagai tools Dan bahasa pemrograman untuk analisis data
+- Membahas vector, matriks, array, data.frame dan list
+Chapter 3
+Fungsi dan Package
+# Membahas cara menggunakan fungsi yang sudah ada di R, membuat fungsi sendiri dan cara menggunakan package
+Chapter 4
+External Data
+# Membahas cara membaca data eksternal (text, cvs, Excel, database) menggunakan berbagai fungsi dan package
+Chapter 5
+Eksplorasi Data
+# Membahas cara eksplorasi data secara numerik maupun grafik dasar R dan visualisasinya menggunnakan ggplot2
+Chapter 6
+Analisis Cluster
+# Membahas secara teori dari analisis gerombol dan contoh program R pada data Iris
+Chapter 7
+Market Basket
+# Membahas teori dan pengaplikasian association rule pada data groceries
+Chapter 8
+Regresi Linier
+# Membahas teori (singkat) dan pengaplikasian regresi linier sederhana dan berganda pada data mtcars
+Chapter 9
+Regresi Logistik Biner
+# Membahas teori (singkat) dan pengaplikasian regresi logistik biner pada data <>
+Chapter 10
+Decision Tree
+# Membahas teori (singkat) Dan pengaplikasian Decision Tree pada data <>
+Chapter 11
+Studi Kasus 1: Segmentasi Pelanggan
+# Membahas Bisnis pada kasus <>
+Chapter 12
+Studi Kasus 2: Market Basket
+# Membuat rules penawaran bundle produk pada kasus swalayan
+Chapter 13
+Studi Kasus 3: Harga Rumah
+# Membuat model Bisnis pada kasus penentuan harga rumah
+Chapter 14
+Studi Kasus 4:  Propensity-To-Buy 1
+# Membuat model Bisnis pada kasus penawaran promo
+Chapter 15
+Studi Kasus 5:  Customer Churn
+# Membuat model Bisnis pada kasus customer churn perusahaan telco
+Chapter 16
+Reporting
+# Membahas penggunaan R Markdown untuk reproducible report
+Chapter 17
+Pemrosesan Terjadwal (Scheduler)
+# Membahas cara menggunnakan Task Scheduler pada sistem operasi windows untuk pemrosesan program yang terjadwal
+Chapter 18
+Interactive Web Dashboard
+# Membahas cara pembuatan insteraktif dashboard menggunnakan R shiny dan bs4Dash
+Chapter 19
+Web Scraping
+# Membahas cara mengambil data dari sebuah web menggunnakan package rvest
+Chapter 20
+Interaktif Visualisasi
+# Membahas cara membuat grafik interaktif menggunnakan plotly dan highcharter

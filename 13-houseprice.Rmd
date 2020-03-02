@@ -1,0 +1,3 @@
+# Studi Kasus 3: Penentuan Harga Rumah {#houseprice}
+
+Membuat model Bisnis pada kasus penentuan harga rumah
