@@ -14,7 +14,7 @@ description: Menggunakan analisis data untuk kebutuhan penunjang keputusan dan p
   bisnis Anda
 site: bookdown::bookdown_site
 biblio-style: apalike
-toc-depth: 2
+toc-depth: 3
 ---
 ```{r, include=F}
 library(captioner)
