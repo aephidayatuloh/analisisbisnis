@@ -7,7 +7,7 @@ output:
 
 ## Kenapa Memilih R?
 
-R adalah sebuah program komputasi statistika dan grafis [@R-base]. Saat ini R sudah dikenal luas sebagai salah satu *powerful software* untuk analisis data dan *Data Science*. Tentu saja selain R masih banyak *software* lain yang tidak kalah dengan R, misalnya Python. Berikut ini beberapa hal diantara kelebihan R. R dibuat dengan tujuan awal untuk komputasi statistika dan grafis. Awalnya digunakan oleh para ilmuwan dalam riset mereka dan para akademisi. 
+R adalah sebuah program komputasi statistika dan grafis [@R-base]. Saat ini R sudah dikenal luas sebagai salah satu *powerful software* untuk analisis data dan *Data Science*. Tentu saja selain R masih banyak *software* lain yang tidak kalah dengan R, misalnya Python. R dibuat dengan tujuan awal untuk komputasi statistika dan grafis. Awalnya digunakan oleh para ilmuwan dalam riset mereka dan para akademisi. Namun seiring perkembangan teknologi, cakupan kemampuan R sebagai bahasa pemrograman menjadi jauh lebih luas. Anda dapat membuat dan update report rutin menggunakan RMarkdown. Anda juga dapat membuat aplikasi web interaktif atau dashboard dengan package shiny. Berikut ini beberapa hal diantara kelebihan R. 
 
 * Gratis dan Open Source
 * Tersedia banyak sekali package yang dapat digunakan
@@ -28,7 +28,7 @@ Di PC dengan OS Windows dapat melakukan langkah-langkah berikut untuk install R.
 5. Simpan file installer tersebut dan tunggu hingga proses download selesai
 6. Setelah download selesai, jalankan file R x.x.x.exe tersebut dan hanya perlu *Next* dan *Finish*
 
-catatan: mungkin Anda hanya perlu memilih untuk install versi 64bit jika OS Windows Anda adalah 64bit. 
+_catatan: mungkin Anda hanya perlu memilih untuk install versi 64bit jika OS Windows Anda adalah 64bit._ 
 
 ### Menjalankan R
 

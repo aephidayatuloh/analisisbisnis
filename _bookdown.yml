@@ -1,5 +1,5 @@
 book_filename: "buku"
 delete_merged_file: true
-language:
+language: 
   ui:
     chapter_name: "Bagian "
