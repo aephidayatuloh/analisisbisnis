@@ -87,7 +87,7 @@ Tanda `>` adalah prompt yang menunjukkan bahwa R sedang dalam posisi siap meneri
 
 ```{r eval=FALSE}
 > 2 +
-+
++ |
 ```
 Perhatikan setelah Anda tekan tombol Enter maka kursor di R yang sebelumnya `>` berganti `+` yang menandakan bahwa perintah belum lengkap. Maka jika Anda kembali menuliskan bilangan lain, misalkan `4` dan tekan tombol Enter maka prompt di R akan kembali menjadi `>` setelah menuliskan hasilnya karena perintah sudah lengkap dan selesai.
 
@@ -95,36 +95,42 @@ Perhatikan setelah Anda tekan tombol Enter maka kursor di R yang sebelumnya `>` 
 print("Hello World!")
 ```
 
-R adalah bahasa pemrograman yang *case-sensitive*. Artinya perbedaan huruf kapital dan huruf kecil sangat berpengaruh.
+R adalah bahasa pemrograman yang *case-sensitive*. Artinya perbedaan huruf kapital dan huruf kecil sangat berpengaruh. Karena R adalah bahasa pemrograman yang *Case Sensitive*, jadi untuk penulisan nama objek atau nilai berupa karakter sangat tergantung dari kapitalisasinya.
+
 
 ```{r eval=FALSE}
 a <- 3
 a
 ## [1] 3
 ```
+
 ```{r eval=FALSE}
 A
 ## Error: object 'A' not found
 ```
 
-
 ### *Assignment*
 
-Operator *assignment* di R umumnya menggunakan `<-`.
+Operator *assignment* di R sedikit berbeda dengan bahasa pemrograman pada umumnya. Hampir semua bahasa pemrograman lain menggunakan tanda `=` sebagai operator _assignment_. R menggunakan `<-` sebagai _assignment_ operator. Namun, R juga dapat menggunakan tanda `=` sebagai operator _assignment_. 
 
 ```{r}
 x <- 5
 x
 ```
 
-| Operator *Assignment* | Penjelasan |
-|---------|--------------------------|
-| `<-` | nilai dari sebelah kanan dimasukkan ke dalam objek di sebelah kiri (dapat juga menggunakan `=`). |
-| `->` | nilai dari sebelah kiri dimasukkan ke dalam objek di sebelah kanan. |
-| `<<-` | nilai dari sebelah kanan dimasukkan ke dalam objek global di sebelah kiri. |
-| `->>` | nilai dari sebelah kiri dimasukkan ke dalam objek global di sebelah kanan. |
-
-Karena R adalah bahasa pemrograman yang *Case Sensitive*, jadi untuk penulisan nama objek atau nilai berupa karakter sangat tergantung dari kapitalisasinya.
+```{r assignment, echo=FALSE, tidy=FALSE}
+knitr::kable(align = "cll", 
+             data.frame(Operator = c("<-", "->", "<<-", "->>"),
+                        Cakupan = c("lokal/global", "lokal/global", "global", "global"),
+                        Penjelasan = c("nilai dari sebelah kanan dimasukkan ke dalam objek di sebelah kiri.",
+                                       "nilai dari sebelah kiri dimasukkan ke dalam objek di sebelah kanan.",
+                                       "nilai dari sebelah kanan dimasukkan ke dalam objek global di sebelah kiri.",
+                                       "nilai dari sebelah kiri dimasukkan ke dalam objek global di sebelah kanan.")
+             ), 
+  caption = 'Operator <em>Assignment</em>',
+  booktabs = TRUE
+)
+```
 
 ```{r}
 x <- 5
@@ -136,6 +142,17 @@ x
 ```
 
 Ketika menggunakan R, setiap yang ada di R disebut objek. Jenis-jenis objek dasar yang ada di R adalah vector, factor, matriks, array, data.frame, list dan function.
+
+### Penamaan Objek {#naming}
+
+Aturan penamaan objek di R, seperti vector (\@ref(vector)), matriks (\@ref(matrix)), data.frame (\@ref(dataframe)) dan lain-lain, hampir sama dengan aturan penamaan pada bahasa pemrograman lain. Namun ada beberapa aturan khusus yang terdapat di R. Berikut aturan penamaan
+
+* Menggunakan kombinasi alfabet (a-z, A-Z), angka (0-9) dan titik atau _underscore_.
+```{r eval=FALSE}
+
+```
+
+* 
 
 ### Vector {#vector}
 
@@ -152,29 +169,35 @@ x
 
 Pada script di atas, dibuat sebuah objek `x` berupa vector numeric. setiap elemen dipisah menggunakan tanda koma (`,`).
 
-2. Tanda colon (`:`)
+2. Tanda titik dua/ _colon_ (`:`)
 
 Untuk membuat sebuah vector numeric berurutan secara meningkat atau menurun. Lihat contoh berikut ini.
 
 ```{r}
-# membuat vector numeric dengan nilai dari 1 s/d 10 secara meningkat 1
 x <- 1:10 # 1 sampai 10
 x
 ```
 
+Fungsi dari operator `:` pada contoh di atas adalah membuat vector numeric dengan nilai dari 1 s/d 10. Tentu saja operator _increment_ ini hanya dapat digunakan untuk numerik dan meningkat sebesar 1 nilai. Operator ini dapat juga digunakan untuk membuat vector dengan nilai menurun.
+
 ```{r}
-# membuat vector numeric dengan nilai dari 10 s/d 10 secara menurun 1
+# membuat vector numeric dengan nilai dari 10 s/d -10 secara menurun 1
 x <- 10:-10 # 10 sampai -10
 x
 ```
 
 3. Fungsi `seq()`
 
-Membuat vector berurutan dan dengan *increment* tertentu.
+Fungsi ini dapat digunakan untuk membuat vector berurutan dan dengan *increment* tertentu.
 
 ```{r}
 x <- seq(from = 1, to = 10) # 1 sampai 10 dengan increment 1 (default by = 1)
 x
+```
+
+Secara default _increment_ dari fungsi `seq()` adalah `by = 1`. Jika Anda ingin nilai _increment_ lain maka hanya perlu mengganti nilai pada argumen `by`.
+
+```{r}
 x <- seq(from = 1, to = 20, by = 2) # 1 sampai 20 dengan increment 2
 x
 x <- seq(from = 1, to = 10, length.out = 7) # 1 sampai 10, sebanyak 7 elemen, increment mengikuti
@@ -185,7 +208,7 @@ x
 
 4. Mengambil satu kolom dari data.frame
 
-Mengambil sebuah kolom dari sebuah data.frame akan dibahas lebih jauh di bagian data.frame (bagian \@ref(dataframe)). Dengan menggunakan tanda dolar `$` dan diikuti dengan nama kolom yang akan diambil dari data.frame tersebut.
+Mengambil sebuah kolom dari sebuah data.frame akan dibahas lebih jauh di bagian data.frame (\@ref(dataframe)). Dengan menggunakan tanda dolar `$` dan diikuti dengan nama kolom yang akan diambil dari data.frame tersebut.
 
 ```{r}
 mtcars$mpg
@@ -260,7 +283,7 @@ factor(fc, levels = c("SD", "SMP", "SMA"))
 ```
 
 
-### Matriks
+### Matriks {#matrix}
 
 Matriks\index{matriks} adalah objek di R yang memiliki 2 dimensi, baris (*row*) dan kolom (*column*), dan tipe nilainya sama. Jika ketika membuat sebuah matriks elemennya memiliki minimal 1 elemen bertipe character maka seluruh matriks tersebut akan bertipe character. Membuat matriks di R menggunakan vector yang dikonversi dimensinya.
 

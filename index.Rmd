@@ -17,6 +17,7 @@ biblio-style: apalike
 toc-depth: 3
 ---
 ```{r, include=F}
+library(kableExtra)
 library(captioner)
 tables <- captioner(prefix = "Tabel ", infix = ". ", auto_space = FALSE)
 figures <- captioner(prefix = "Gambar ", infix = ". ", auto_space = FALSE)
@@ -24,19 +25,19 @@ figures <- captioner(prefix = "Gambar ", infix = ". ", auto_space = FALSE)
 
 # Kata Pengantar {-}
 
-*Assalamu'alaikum warohmatullohi wabarokatuh...*
+_Assalamu'alaikum warohmatullohi wabarokatuh..._
 
-*Alhamdulillahi robbil'aalamiin...*
+_Alhamdulillahi robbil'aalamiin..._
 
 Segala puji dan syukur hanya untuk Alloh Subhanahu Wa Ta'ala karena atas rahmat dan ridho-Nya buku ini dapat diselesaikan. Buku ini ditulis untuk menuangkan ide dan pengalaman melakukan penelitian di beberapa bidang bisnis sebagai konsultan analisis data maupun karyawan di sebuah perusahaan.
 
 Buku ini disusun dengan menggunakan R versi 3.6.0 64bit pada Windows 10, **RMarkdown** dan **bookdown**. Tujuan utama dari buku ini adalah untuk membantu yang ingin belajar analisis data menggunakan R melalui pendekatan bisnis. Contoh kasus yang disajikan diharapkan dapat memperdalam pemahaman pembaca mengenai materi dan permasalahan bisnis yang dapat diselesaikan. Contoh script yang digunakan lebih banyak menggunakan [tidyverse](https://www.tidyverse.org/).
 
-Dalam buku ini tidak akan dibahas secara detail dari suatu teori atau algoritma. Juga tidak akan membahas teori statistika yang digunakan secara mendalam. Di dalam buku ini lebih ditekankan pada penggunaan R sebagai tools untuk analisis data. Buku ini akan membahas cara Anda berinteraksi dengan R mulai dari download dan install hingga membuat _data-driven product_ berupa dashboard.
+Dalam buku ini tidak akan dibahas secara detail dari suatu teori atau algoritma. Juga tidak akan membahas teori statistika yang digunakan secara mendalam. Di dalam buku ini lebih ditekankan pada penggunaan R sebagai tools untuk analisis data. Di dalam buku ini akan membahas cara Anda berinteraksi dengan R mulai dari download dan install hingga membuat _data-driven product_ berupa dashboard.
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
 knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+  .packages(), 'bookdown', 'knitr', 'rmarkdown', 'captioner', 'kableExtra'
 ), 'packages.bib')
 ```
