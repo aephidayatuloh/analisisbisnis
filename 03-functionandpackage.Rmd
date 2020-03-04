@@ -1,3 +1,0 @@
-# Function dan Packages {#functionandpackage}
-
-Membahas cara menggunakan fungsi yang sudah ada di R, membuat fungsi sendiri dan cara menggunakan package.
