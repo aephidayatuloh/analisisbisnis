@@ -10,7 +10,7 @@ documentclass: book
 link-citations: yes
 lof: yes
 lot: yes
-description: Menggunakan analisis data untuk kebutuhan penunjang keputusan dan pengembangan bisnis Anda
+description: Menggunakan analisis data sebagai penunjang utama pengambilan keputusan dan pengembangan bisnis Anda
 site: bookdown::bookdown_site
 biblio-style: apalike
 toc-depth: 3
