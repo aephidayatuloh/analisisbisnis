@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Dasar Pemrograman R {#basicr}
 
 Hal yang paling sederhana yang dapat dilakukan R adalah sebagai kalkulator. Coba Anda ketikan perintah di bawah ini pada console R dan tekan tombol Enter setelah selesai. 
@@ -261,7 +266,7 @@ m # perhatikan elemen di baris 4 kolom 3 sudah berubah jadi 0.0
 
 ## Array
 
-Array\index{array} merupakan matriks dengan dimensi lebih banyak. Jika matriks hanya mempunyai 2 dimensi, maka array dapat memiliki dimensi lebih dari 2.
+Array \index{array} merupakan matriks dengan dimensi lebih banyak. Jika matriks hanya mempunyai 2 dimensi, maka array dapat memiliki dimensi lebih dari 2. 
 
 ```{r echo=FALSE, fig.cap='Ilustrasi Array 3 dimensi', fig.align='center'}
 knitr::include_graphics("array.png") 

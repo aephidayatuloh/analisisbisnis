@@ -4,6 +4,21 @@ Membahas cara membaca data eksternal (text, cvs, Excel dan database) menggunakan
 
 Some _significant_ applications are demonstrated in this chapter.
 
-## Example one
+## File Eksternal
 
-## Example two
+### Textfile
+
+### CSV
+
+### Excel
+
+## Database
+
+### SQLite
+
+### MySQL
+
+### PostgreSQL
+
+### Koneksi ODBC (Windows)
+
