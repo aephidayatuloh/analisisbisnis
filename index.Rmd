@@ -13,7 +13,7 @@ lot: yes
 description: Menggunakan analisis data sebagai penunjang utama pengambilan keputusan dan pengembangan bisnis Anda
 site: bookdown::bookdown_site
 biblio-style: apalike
-toc-depth: 3
+toc-depth: 2
 ---
 ```{r, include=F}
 library(kableExtra)
