@@ -3,7 +3,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">Analisis Data dan Bisinis: Implementasi Menggunakan R</a></li>
+        <li><a href="./">Analisis Data untuk Bisnis: Implementasi Menggunakan R</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     download: ["pdf", "epub"]
