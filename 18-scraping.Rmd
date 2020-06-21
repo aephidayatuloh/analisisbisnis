@@ -1,3 +1,0 @@
-# Web Scraping {#scraping}
-
-Membahas cara mengambil data dari sebuah web menggunnakan package rvest

@@ -1,3 +1,0 @@
-# Studi Kasus 2: Market Basket {#mba}
-
-Membuat rules penawaran bundle produk pada kasus swalayan

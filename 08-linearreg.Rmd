@@ -1,3 +1,0 @@
-# Regresi Linier {#linearreg}
-
-Membahas teori (singkat) dan pengaplikasian regresi linier sederhana dan berganda pada data mtcars.

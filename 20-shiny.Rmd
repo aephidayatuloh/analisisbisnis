@@ -1,3 +1,0 @@
-# Web Dashboard Interaktif {#shiny}
-
-Membahas cara pembuatan insteraktif dashboard menggunnakan R shiny dan bs4Dash

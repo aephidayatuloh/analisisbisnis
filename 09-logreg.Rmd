@@ -1,3 +1,0 @@
-# Regresi Logistik Biner {#logreg}
-
-Membahas teori (singkat) dan pengaplikasian regresi logistik biner pada data <tbn>.

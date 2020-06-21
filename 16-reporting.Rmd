@@ -1,3 +1,0 @@
-# Reporting {#reporting}
-
-Membahas penggunaan R Markdown untuk reproducible report

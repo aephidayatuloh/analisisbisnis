@@ -1,3 +1,0 @@
-# Studi Kasus 1: Segmentasi Pelanggan {#custseg}
-
-Membahas Bisnis pada kasus Pengelompokan pelanggan untuk merancang program promo.

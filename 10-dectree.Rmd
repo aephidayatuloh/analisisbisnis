@@ -1,3 +1,0 @@
-# Decision Tree {#dectree}
-
-Membahas teori (singkat) Dan pengaplikasian Decision Tree pada data <tbn>.
